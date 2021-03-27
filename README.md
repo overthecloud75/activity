@@ -1,6 +1,6 @@
 # Activity
 ### 1. Result
-
+![activity](https://user-images.githubusercontent.com/30888482/112719684-7134e100-8f3d-11eb-815b-bbe900edf91e.PNG)
 ### 2. Usage
 python activity_server/main.py<br>
 http://127.0.0.1:5000 <br>
