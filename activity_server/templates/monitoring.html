@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- ---------------------------------------------------------------------- -->
+{% if data_dict.ids %}
+<div class="container my-3">
+    <table class="table">
+        <th>group</th>
+        <th>name</th>
+        <th>is_active</th>
+        <th>app</th>
+        <th>title</th>
+        <th>start_time</th>
+        {% for id in data_dict.ids %}
+        <tr align="left">
+            <td>{{id.group}}</td>
+            <td>{{id.name}}</td>
+            <td>{{id.is_active}}</td>
+            <td>{{id.app}}</td>
+            <td>{{id.title}}</td>
+            <td>{{id.start_time}}</td>
+        </tr>
+        {% endfor %}
+</table>
+{% else %}
+    <p>사용자가 없습니다.</p>
+{% endif %}
+{% if data_dict.imgs %}
+    <table class="screen">
+        {% for img in data_dict.imgs %}
+        <tr>
+            <th>{{img.name}}</th>
+        </tr>
+        <tr>
+            <td><img src="{{url_for('static', filename=img.path)}}" height="{{img.size.height}}" width="{{img.size.width}}"></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>screenshot이 없습니다.</p>
+</div>
+{% endif %}
+<!-- ------------------------------ [edit] -------------------------------- -->
+{% endblock %}

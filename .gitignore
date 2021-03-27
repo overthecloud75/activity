@@ -1,0 +1,8 @@
+activity_client/.idea/
+activity_client/__pycache__/
+activity_client/log/
+activity_client/screenshot/
+activity_server/.idea/
+activity_server/__pycache__/
+activity_server/static/screenshot/
+activity_server/views/__pycache__/
