@@ -10,7 +10,7 @@ monitoring<br>
 python activity_client/activity.py<br>
 login<br>
 ### 3. Acknowlegements
-this implemenation has been tested with Python 3.8.6
+this implementation has been tested with Python 3.8.6
 ### 4. References
 https://github.com/ActivityWatch/activitywatch (activity watch)<br>
 https://wikidocs.net/book/4542 (flask)<br>

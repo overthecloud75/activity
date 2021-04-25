@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- ---------------------------------------------------------------------- -->
-{% if data_dict.ids %}
 <div class="container my-3">
+    {% if data_dict.ids %}
     <table class="table">
-        <th>group</th>
-        <th>name</th>
-        <th>is_active</th>
-        <th>app</th>
-        <th>title</th>
-        <th>start_time</th>
+        <tr>
+            <th>group</th>
+            <th>name</th>
+            <th>is_active</th>
+            <th>app</th>
+            <th>title</th>
+            <th>start_time</th>
+        </tr>
         {% for id in data_dict.ids %}
         <tr align="left">
             <td>{{id.group}}</td>
@@ -20,11 +22,11 @@
             <td>{{id.start_time}}</td>
         </tr>
         {% endfor %}
-</table>
-{% else %}
+    </table>
+    {% else %}
     <p>사용자가 없습니다.</p>
-{% endif %}
-{% if data_dict.imgs %}
+    {% endif %}
+    {% if data_dict.imgs %}
     <table class="screen">
         {% for img in data_dict.imgs %}
         <tr>
@@ -35,9 +37,9 @@
         </tr>
         {% endfor %}
     </table>
-{% else %}
+    {% else %}
     <p>screenshot이 없습니다.</p>
+    {% endif %}
 </div>
-{% endif %}
 <!-- ------------------------------ [edit] -------------------------------- -->
 {% endblock %}
